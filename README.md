@@ -30,5 +30,5 @@
   node-v8-clone    x 7,716,270 ops/sec ±2.81% (94 runs sampled)
 ```
 
-- Fastest is node-v8-clone
-- Slowest is clone-extend
+- Fastest is **node-v8-clone**
+- Slowest is **clone-extend**
