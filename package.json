@@ -28,6 +28,7 @@
     "clone": "1.0.2",
     "clone-deep": "0.1.1",
     "clone-extend": "0.1.2",
+    "cloneextend": "0.0.3",
     "component-clone": "0.2.2",
     "deepcopy": "0.5.0",
     "lodash": "3.6.0",

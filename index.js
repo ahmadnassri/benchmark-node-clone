@@ -9,12 +9,13 @@ var chalk = require('chalk')
 var clone = require('clone')
 var cloneDeep = require('clone-deep')
 var cloneExtend = require('clone-extend')
+var cloneextend = require('cloneextend')
 var componentClone = require('component-clone')
-var utilsCopy = require('utils-copy')
 var deepcopy = require('deepcopy')
 var lodash = require('lodash')
 var safeCloneDeep = require('safe-clone-deep')
 var structuredClone = require('structured-clone')
+var utilsCopy = require('utils-copy')
 var v8clone = require('node-v8-clone').clone
 
 var suite = new Benchmark.Suite()
@@ -35,16 +36,20 @@ suite.add('JSON.stringify', function () {
   cloneExtend(fixture, {})
 })
 
+.add('cloneextend', function () {
+  cloneextend.clone(fixture)
+})
+
 .add('component-clone', function () {
   componentClone(fixture)
 })
 
-.add('lodash', function () {
-  lodash.cloneDeep(fixture)
-})
-
 .add('deepcopy', function () {
   deepcopy(fixture)
+})
+
+.add('lodash', function () {
+  lodash.cloneDeep(fixture)
 })
 
 .add('safe-clone-deep', function () {

@@ -3,31 +3,33 @@
 ## Libraries Tested
 
 - JSON.stringify
-- [clone](http://npm.im/clone) `v1.0.2`
-- [clone-deep](http://npm.im/clone-deep) `v0.1.1`
-- [clone-extend](http://npm.im/clone-extend) `v0.1.2`
-- [component-clone](http://npm.im/component-clone) `v0.2.2`
-- [deepcopy](http://npm.im/deepcopy) `v0.5.0`
-- [lodash](http://npm.im/lodash) `v3.6.0`
-- [node-v8-clone](http://npm.im/node-v8-clone) `v0.6.2`
-- [safe-clone-deep](http://npm.im/safe-clone-deep) `v1.0.5`
-- [structured-clone](http://npm.im/structured-clone) `v0.2.2`
-- [utils-copy](http://npm.im/utils-copy) `v1.0.0`
+- [clone-deep](https://www.npmjs.com/package/clone-deep) `v0.1.1`
+- [clone-extend](https://www.npmjs.com/package/clone-extend) `v0.1.2`
+- [clone](https://www.npmjs.com/package/clone) `v1.0.2`
+- [cloneextend](https://www.npmjs.com/package/cloneextend) `v0.0.3`
+- [component-clone](https://www.npmjs.com/package/component-clone) `v0.2.2`
+- [deepcopy](https://www.npmjs.com/package/deepcopy) `v0.5.0`
+- [lodash](https://www.npmjs.com/package/lodash) `v3.6.0`
+- [node-v8-clone](https://www.npmjs.com/package/node-v8-clone) `v0.6.2`
+- [safe-clone-deep](https://www.npmjs.com/package/safe-clone-deep) `v1.0.5`
+- [structured-clone](https://www.npmjs.com/package/structured-clone) `v0.2.2`
+- [utils-copy](https://www.npmjs.com/package/utils-copy) `v1.0.0`
 
 ## Latest results
 
 ```
-  JSON.stringify   x    38,549 ops/sec ±1.91% (91 runs sampled)
-  clone            x    16,070 ops/sec ±2.16% (98 runs sampled)
-  clone-deep       x    25,164 ops/sec ±2.75% (86 runs sampled)
-  clone-extend     x     7,676 ops/sec ±2.46% (97 runs sampled)
-  component-clone  x    16,572 ops/sec ±2.28% (97 runs sampled)
-  lodash           x    22,509 ops/sec ±3.74% (87 runs sampled)
-  deepcopy         x    13,603 ops/sec ±3.67% (95 runs sampled)
-  safe-clone-deep  x    32,522 ops/sec ±2.26% (96 runs sampled)
-  structured-clone x    21,270 ops/sec ±2.14% (93 runs sampled)
-  utils-copy       x    16,111 ops/sec ±2.53% (98 runs sampled)
-  node-v8-clone    x 7,716,270 ops/sec ±2.81% (94 runs sampled)
+  JSON.stringify   x    40,353 ops/sec ±1.99% (90 runs sampled)
+  clone            x    17,075 ops/sec ±2.84% (98 runs sampled)
+  clone-deep       x    25,433 ops/sec ±2.88% (90 runs sampled)
+  clone-extend     x     7,435 ops/sec ±2.54% (91 runs sampled)
+  cloneextend      x    17,953 ops/sec ±5.16% (86 runs sampled)
+  component-clone  x    15,670 ops/sec ±2.82% (95 runs sampled)
+  deepcopy         x    13,075 ops/sec ±3.31% (89 runs sampled)
+  lodash           x    22,766 ops/sec ±2.88% (92 runs sampled)
+  safe-clone-deep  x    30,656 ops/sec ±4.10% (92 runs sampled)
+  structured-clone x    20,181 ops/sec ±1.94% (97 runs sampled)
+  utils-copy       x    15,843 ops/sec ±3.37% (95 runs sampled)
+  node-v8-clone    x 7,977,703 ops/sec ±2.99% (87 runs sampled)
 ```
 
 - Fastest is **node-v8-clone**
