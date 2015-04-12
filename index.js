@@ -65,7 +65,7 @@ suite.add('JSON.stringify', function () {
 })
 
 .add('node-v8-clone', function () {
-  v8clone(fixture)
+  v8clone(fixture, true)
 })
 
 // add listeners
