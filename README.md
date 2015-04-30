@@ -32,5 +32,6 @@
   node-v8-clone    x 49,841 ops/sec ±1.72% (95 runs sampled)
 ```
 
-- Fastest is **node-v8-clone**
+- Fastest is **node-v8-clone** *(however, this uses `C++` extension and does not currently work with io.js)*
+- Second is `JSON.stringify` *(my preferred method, native, and always available, less memory usage, and natively optimized)*
 - Slowest is **clone-extend**
