@@ -17,6 +17,8 @@ var safeCloneDeep = require('safe-clone-deep')
 var structuredClone = require('structured-clone')
 var utilsCopy = require('utils-copy')
 var v8clone = require('node-v8-clone').clone
+var dcopy = require('deep-copy')
+var extend = require('extend')
 
 var suite = new Benchmark.Suite()
 
@@ -66,6 +68,14 @@ suite.add('JSON.stringify', function () {
 
 .add('node-v8-clone', function () {
   v8clone(fixture, true)
+})
+
+.add('deep-copy', function () {
+  dcopy(fixture)
+})
+
+.add('extend', function () {
+  extend(true, {}, fixture)
 })
 
 // add listeners
