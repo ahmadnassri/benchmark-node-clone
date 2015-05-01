@@ -11,19 +11,24 @@ var cloneDeep = require('clone-deep')
 var cloneExtend = require('clone-extend')
 var cloneextend = require('cloneextend')
 var componentClone = require('component-clone')
+var dcopy = require('deep-copy')
 var deepcopy = require('deepcopy')
+var extend = require('extend')
 var lodash = require('lodash')
 var safeCloneDeep = require('safe-clone-deep')
+var stringifyClone = require('stringify-clone')
 var structuredClone = require('structured-clone')
 var utilsCopy = require('utils-copy')
 var v8clone = require('node-v8-clone').clone
-var dcopy = require('deep-copy')
-var extend = require('extend')
 
 var suite = new Benchmark.Suite()
 
 suite.add('JSON.stringify', function () {
   JSON.parse(JSON.stringify(fixture))
+})
+
+suite.add('stringify-clone', function () {
+  stringifyClone(fixture)
 })
 
 .add('clone', function () {

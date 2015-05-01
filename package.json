@@ -19,7 +19,7 @@
     "url": "https://github.com/ahmadnassri/node-clone-benchmark/issues"
   },
   "scripts": {
-    "start": "node index"
+    "test": "node index"
   },
   "devDependencies": {
     "beautify-benchmark": "^0.2.4",
@@ -36,6 +36,7 @@
     "lodash": "3.7.0",
     "node-v8-clone": "0.6.2",
     "safe-clone-deep": "1.0.5",
+    "stringify-clone": "^1.0.0",
     "structured-clone": "0.2.2",
     "utils-copy": "1.0.0"
   }
