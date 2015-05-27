@@ -6,8 +6,7 @@
   "homepage": "https://github.com/ahmadnassri/node-clone-benchmark",
   "repository": "ahmadnassri/node-clone-benchmark",
   "license": "MIT",
-  "main": "./src/index.js",
-  "bin": "./bin/node-clone-benchmark",
+  "bin": "index.js",
   "engines": {
     "node": ">=0.10"
   },
@@ -33,10 +32,10 @@
     "deep-copy": "1.0.0",
     "deepcopy": "0.5.0",
     "extend": "2.0.1",
-    "lodash": "3.7.0",
+    "lodash": "3.9.3",
     "node-v8-clone": "0.6.2",
     "safe-clone-deep": "1.0.5",
-    "stringify-clone": "^1.0.0",
+    "stringify-clone": "^1.1.0",
     "structured-clone": "0.2.2",
     "utils-copy": "1.0.0"
   }
