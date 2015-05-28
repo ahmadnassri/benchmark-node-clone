@@ -18,6 +18,7 @@
     "url": "https://github.com/ahmadnassri/node-clone-benchmark/issues"
   },
   "scripts": {
+    "pretest": "standard && echint",
     "test": "node index"
   },
   "devDependencies": {
