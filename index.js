@@ -23,6 +23,10 @@ var v8clone = require('node-v8-clone').clone
 
 var suite = new Benchmark.Suite()
 
+.add('node-v8-clone', function () {
+  v8clone(fixture, true)
+})
+
 suite.add('JSON.stringify', function () {
   JSON.parse(JSON.stringify(fixture))
 })
@@ -69,10 +73,6 @@ suite.add('stringify-clone', function () {
 
 .add('utils-copy', function () {
   utilsCopy(fixture)
-})
-
-.add('node-v8-clone', function () {
-  v8clone(fixture, true)
 })
 
 .add('deep-copy', function () {
