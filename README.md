@@ -85,34 +85,6 @@
   clone-extend     x  7,304 ops/sec ±1.51% (94 runs sampled)
 ```
 
-### `io.js v1.x.x`
-
-###### Fastest
-```
-  safe-clone-deep  x 51,930 ops/sec ±2.68% (89 runs sampled)
-```
-###### Slowest
-```
-  clone-extend     x  7,185 ops/sec ±2.49% (85 runs sampled)
-```
-###### Results
-```
-  safe-clone-deep  x 51,930 ops/sec ±2.68% (89 runs sampled)
-  JSON.stringify   x 36,300 ops/sec ±0.96% (86 runs sampled)
-  stringify-clone  x 35,220 ops/sec ±1.65% (94 runs sampled)
-  deep-copy        x 26,934 ops/sec ±1.67% (92 runs sampled)
-  lodash           x 25,982 ops/sec ±2.63% (83 runs sampled)
-  cloneextend      x 20,753 ops/sec ±2.12% (88 runs sampled)
-  clone-deep       x 20,143 ops/sec ±1.46% (89 runs sampled)
-  component-clone  x 19,055 ops/sec ±2.38% (89 runs sampled)
-  structured-clone x 17,425 ops/sec ±1.96% (92 runs sampled)
-  extend           x 17,111 ops/sec ±1.09% (96 runs sampled)
-  utils-copy       x 16,422 ops/sec ±1.06% (89 runs sampled)
-  clone            x 14,379 ops/sec ±2.40% (90 runs sampled)
-  deepcopy         x 13,781 ops/sec ±1.31% (91 runs sampled)
-  clone-extend     x  7,185 ops/sec ±2.49% (85 runs sampled)
-```
-
 ### `io.js v2.x.x`
 
 ###### Fastest
@@ -139,4 +111,32 @@
   deepcopy         x 15,015 ops/sec ±1.37% (94 runs sampled)
   utils-copy       x 13,504 ops/sec ±1.58% (91 runs sampled)
   clone-extend     x  7,929 ops/sec ±1.28% (92 runs sampled)
+```
+
+### `io.js v1.x.x`
+
+###### Fastest
+```
+  safe-clone-deep  x 51,930 ops/sec ±2.68% (89 runs sampled)
+```
+###### Slowest
+```
+  clone-extend     x  7,185 ops/sec ±2.49% (85 runs sampled)
+```
+###### Results
+```
+  safe-clone-deep  x 51,930 ops/sec ±2.68% (89 runs sampled)
+  JSON.stringify   x 36,300 ops/sec ±0.96% (86 runs sampled)
+  stringify-clone  x 35,220 ops/sec ±1.65% (94 runs sampled)
+  deep-copy        x 26,934 ops/sec ±1.67% (92 runs sampled)
+  lodash           x 25,982 ops/sec ±2.63% (83 runs sampled)
+  cloneextend      x 20,753 ops/sec ±2.12% (88 runs sampled)
+  clone-deep       x 20,143 ops/sec ±1.46% (89 runs sampled)
+  component-clone  x 19,055 ops/sec ±2.38% (89 runs sampled)
+  structured-clone x 17,425 ops/sec ±1.96% (92 runs sampled)
+  extend           x 17,111 ops/sec ±1.09% (96 runs sampled)
+  utils-copy       x 16,422 ops/sec ±1.06% (89 runs sampled)
+  clone            x 14,379 ops/sec ±2.40% (90 runs sampled)
+  deepcopy         x 13,781 ops/sec ±1.31% (91 runs sampled)
+  clone-extend     x  7,185 ops/sec ±2.49% (85 runs sampled)
 ```
