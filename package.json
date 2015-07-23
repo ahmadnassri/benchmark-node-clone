@@ -1,10 +1,10 @@
 {
   "private": true,
-  "name": "node-clone-benchmark",
+  "name": "benchmark-node-clone",
   "description": "What is the fastest object cloning method?",
   "author": "Ahmad Nassri <ahmad@ahmadnassri.com> (https://www.ahmadnassri.com/)",
-  "homepage": "https://github.com/ahmadnassri/node-clone-benchmark",
-  "repository": "ahmadnassri/node-clone-benchmark",
+  "homepage": "https://github.com/ahmadnassri/benchmark-node-clone",
+  "repository": "ahmadnassri/benchmark-node-clone",
   "license": "MIT",
   "bin": "index.js",
   "engines": {
@@ -15,7 +15,7 @@
     "fixture.json"
   ],
   "bugs": {
-    "url": "https://github.com/ahmadnassri/node-clone-benchmark/issues"
+    "url": "https://github.com/ahmadnassri/benchmark-node-clone/issues"
   },
   "scripts": {
     "pretest": "standard && echint",

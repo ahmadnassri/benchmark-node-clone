@@ -19,13 +19,13 @@ var safeCloneDeep = require('safe-clone-deep')
 var stringifyClone = require('stringify-clone')
 var structuredClone = require('structured-clone')
 var utilsCopy = require('utils-copy')
-var v8clone = require('node-v8-clone').clone
+// var v8clone = require('node-v8-clone').clone
 
 var suite = new Benchmark.Suite()
 
-.add('node-v8-clone', function () {
-  v8clone(fixture, true)
-})
+// .add('node-v8-clone', function () {
+//   v8clone(fixture, true)
+// })
 
 suite.add('JSON.stringify', function () {
   JSON.parse(JSON.stringify(fixture))
