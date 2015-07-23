@@ -22,80 +22,80 @@ var structuredClone = require('structured-clone')
 var utilsCopy = require('utils-copy')
 var v8clone = require('node-v8-clone').clone
 
-var suite = new Benchmark.Suite()
+new Benchmark.Suite()
 
-.add('node-v8-clone', function () {
-  v8clone(fixture, true)
-})
+  .add('node-v8-clone', function () {
+    v8clone(fixture, true)
+  })
 
-suite.add('JSON.stringify', function () {
-  JSON.parse(JSON.stringify(fixture))
-})
+  .add('JSON.stringify', function () {
+    JSON.parse(JSON.stringify(fixture))
+  })
 
-suite.add('stringify-clone', function () {
-  stringifyClone(fixture)
-})
+  .add('stringify-clone', function () {
+    stringifyClone(fixture)
+  })
 
-.add('clone', function () {
-  clone(fixture)
-})
+  .add('clone', function () {
+    clone(fixture)
+  })
 
-.add('clone-deep', function () {
-  cloneDeep(fixture)
-})
+  .add('clone-deep', function () {
+    cloneDeep(fixture)
+  })
 
-.add('clone-extend', function () {
-  cloneExtend(fixture, {})
-})
+  .add('clone-extend', function () {
+    cloneExtend(fixture, {})
+  })
 
-.add('cloneextend', function () {
-  cloneextend.clone(fixture)
-})
+  .add('cloneextend', function () {
+    cloneextend.clone(fixture)
+  })
 
-.add('component-clone', function () {
-  componentClone(fixture)
-})
+  .add('component-clone', function () {
+    componentClone(fixture)
+  })
 
-.add('deepcopy', function () {
-  deepcopy(fixture)
-})
+  .add('deepcopy', function () {
+    deepcopy(fixture)
+  })
 
-.add('lodash', function () {
-  lodash.cloneDeep(fixture)
-})
+  .add('lodash', function () {
+    lodash.cloneDeep(fixture)
+  })
 
-.add('safe-clone-deep', function () {
-  safeCloneDeep(fixture)
-})
+  .add('safe-clone-deep', function () {
+    safeCloneDeep(fixture)
+  })
 
-.add('structured-clone', function () {
-  structuredClone(fixture)
-})
+  .add('structured-clone', function () {
+    structuredClone(fixture)
+  })
 
-.add('utils-copy', function () {
-  utilsCopy(fixture)
-})
+  .add('utils-copy', function () {
+    utilsCopy(fixture)
+  })
 
-.add('deep-copy', function () {
-  dcopy(fixture)
-})
+  .add('deep-copy', function () {
+    dcopy(fixture)
+  })
 
-.add('extend', function () {
-  extend(true, {}, fixture)
-})
+  .add('extend', function () {
+    extend(true, {}, fixture)
+  })
 
-// add listeners
-.on('cycle', function (event) {
-  benchmarks.add(event.target)
-})
+  // add listeners
+  .on('cycle', function (event) {
+    benchmarks.add(event.target)
+  })
 
-.on('complete', function () {
-  benchmarks.log()
+  .on('complete', function () {
+    benchmarks.log()
 
-  console.log('Fastest is %s', chalk.green(this.filter('fastest').pluck('name')))
-  console.log('Slowest is %s', chalk.red(this.filter('slowest').pluck('name')))
-})
+    console.log('Fastest is %s', chalk.green(this.filter('fastest').pluck('name')))
+    console.log('Slowest is %s', chalk.red(this.filter('slowest').pluck('name')))
+  })
 
-.run({
-  'async': true
-})
+  .run({
+    'async': true
+  })
