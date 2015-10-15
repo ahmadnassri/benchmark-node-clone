@@ -11,7 +11,7 @@
 - [deepcopy](https://www.npmjs.com/package/deepcopy) `v0.5.0`
 - [extend](https://www.npmjs.com/package/extend) `v3.0.0`
 - [lodash](https://www.npmjs.com/package/lodash) `v3.10.0`
-- [node-v8-clone](https://www.npmjs.com/package/node-v8-clone) `v0.6.2` - *this uses `C++` extension and does not currently work with io.js*
+- [node-v8-clone](https://www.npmjs.com/package/node-v8-clone) `v0.6.2` - *this uses `C++` extension and does not currently only works with io.js / node v0.12.x*
 - [safe-clone-deep](https://www.npmjs.com/package/safe-clone-deep) `v1.0.5`
 - [stringify-clone](https://www.npmjs.com/package/stringify-clone) `v1.1.0` - *this is just a wrapper around `JSON.parse(JSON.stringify())`*
 - [structured-clone](https://www.npmjs.com/package/structured-clone) `v0.2.2`
@@ -25,6 +25,35 @@
   - `stringify-clone` provides a convenient wrapper
 
 ## Results
+
+### `Node.js v4.1.x`
+
+###### Fastest
+```
+  stringify-clone  x 45,601 ops/sec ±1.65% (91 runs sampled)
+```
+###### Slowest
+```
+  clone-extend     x 11,770 ops/sec ±1.39% (87 runs sampled)
+```
+###### Results
+```
+  JSON.stringify   x 45,039 ops/sec ±1.87% (85 runs sampled)
+  stringify-clone  x 45,601 ops/sec ±1.65% (91 runs sampled)
+  lodash           x 42,134 ops/sec ±3.26% (93 runs sampled)
+  deep-copy        x 36,650 ops/sec ±2.81% (87 runs sampled)
+  structured-clone x 33,017 ops/sec ±2.33% (90 runs sampled)
+  component-clone  x 28,422 ops/sec ±2.58% (94 runs sampled)
+  utils-copy       x 19,427 ops/sec ±1.41% (98 runs sampled)
+  cloneextend      x 19,349 ops/sec ±4.58% (81 runs sampled)
+  extend           x 18,642 ops/sec ±2.59% (92 runs sampled)
+  clone            x 25,698 ops/sec ±1.94% (93 runs sampled)
+  deepcopy         x 21,034 ops/sec ±2.14% (92 runs sampled)
+  clone-deep       x 15,806 ops/sec ±2.38% (86 runs sampled)
+  clone-extend     x 11,770 ops/sec ±1.39% (87 runs sampled)
+```
+
+----
 
 ### `Node.js v0.12.x`
 
@@ -55,6 +84,7 @@
   clone-extend     x  5,289 ops/sec ±2.47% (86 runs sampled)
 ```
 
+----
 
 ### `Node.js v0.10.x`
 
@@ -85,6 +115,8 @@
   clone-extend     x  7,304 ops/sec ±1.51% (94 runs sampled)
 ```
 
+----
+
 ### `io.js v2.x.x`
 
 ###### Fastest
@@ -112,6 +144,8 @@
   utils-copy       x 13,504 ops/sec ±1.58% (91 runs sampled)
   clone-extend     x  7,929 ops/sec ±1.28% (92 runs sampled)
 ```
+
+----
 
 ### `io.js v1.x.x`
 
