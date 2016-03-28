@@ -24,7 +24,7 @@
   "devDependencies": {
     "beautify-benchmark": "^0.2.4",
     "benchmark": "^1.0.0",
-    "chalk": "^1.1.0",
+    "chalk": "^1.1.2",
     "clone": "1.0.2",
     "clone-deep": "0.2.3",
     "clone-extend": "0.1.2",
