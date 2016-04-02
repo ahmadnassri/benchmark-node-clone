@@ -11,7 +11,7 @@
 - [deepcopy](https://www.npmjs.com/package/deepcopy) `v0.6.1`
 - [extend](https://www.npmjs.com/package/extend) `v3.0.0`
 - [lodash](https://www.npmjs.com/package/lodash) `v4.7.0`
-- ~~[node-v8-clone](https://www.npmjs.com/package/node-v8-clone) `v0.6.2`~~ *uses a `C++` extension and does not currently only works with node v0.12.x*
+- ~~[node-v8-clone](https://www.npmjs.com/package/node-v8-clone) `v0.6.2`~~ *uses a `C++` extension, does not work with node > `v0.12.x`*
 - ~~[safe-clone-deep](https://www.npmjs.com/package/safe-clone-deep) `v1.1.2`~~ *stopped working with node >= `v5.x`*
 - [stringify-clone](https://www.npmjs.com/package/stringify-clone) `v1.1.1` - *this is just a wrapper around `JSON.parse(JSON.stringify())`*
 - [structured-clone](https://www.npmjs.com/package/structured-clone) `v0.2.2`
