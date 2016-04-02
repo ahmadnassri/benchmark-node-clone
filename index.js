@@ -16,18 +16,11 @@ var dcopy = require('deep-copy')
 var deepcopy = require('deepcopy')
 var extend = require('extend')
 var lodash = require('lodash')
-var safeCloneDeep = require('safe-clone-deep')
 var stringifyClone = require('stringify-clone')
 var structuredClone = require('structured-clone')
 var utilsCopy = require('utils-copy')
-var v8clone = require('node-v8-clone').clone
 
 new Benchmark.Suite()
-
-  .add('node-v8-clone', function () {
-    v8clone(fixture, true)
-  })
-
   .add('JSON.stringify', function () {
     JSON.parse(JSON.stringify(fixture))
   })
@@ -64,10 +57,6 @@ new Benchmark.Suite()
     lodash.cloneDeep(fixture)
   })
 
-  .add('safe-clone-deep', function () {
-    safeCloneDeep(fixture)
-  })
-
   .add('structured-clone', function () {
     structuredClone(fixture)
   })
@@ -92,8 +81,8 @@ new Benchmark.Suite()
   .on('complete', function () {
     benchmarks.log()
 
-    console.log('Fastest is %s', chalk.green(this.filter('fastest').pluck('name')))
-    console.log('Slowest is %s', chalk.red(this.filter('slowest').pluck('name')))
+    console.log('Fastest is %s', chalk.green(this.filter('fastest').map('name')))
+    console.log('Slowest is %s', chalk.red(this.filter('slowest').map('name')))
   })
 
   .run({
