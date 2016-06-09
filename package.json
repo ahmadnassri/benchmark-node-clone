@@ -34,7 +34,7 @@
     "deepcopy": "0.6.1",
     "echint": "^1.5.3",
     "extend": "3.0.0",
-    "lodash": "4.7.0",
+    "lodash": "4.11.1",
     "standard": "^7.1.2",
     "stringify-clone": "^1.1.1",
     "structured-clone": "0.2.2",
