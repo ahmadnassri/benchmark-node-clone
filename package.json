@@ -29,7 +29,7 @@
     "clone-deep": "0.2.4",
     "clone-extend": "0.1.2",
     "cloneextend": "0.0.3",
-    "component-clone": "0.2.2",
+    "component-clone": "0.2.3",
     "deep-copy": "1.1.2",
     "deepcopy": "0.6.2",
     "echint": "^1.5.3",
