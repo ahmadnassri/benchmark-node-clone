@@ -1,82 +1,40 @@
-'use strict'
-
 // dependencies
-var Benchmark = require('benchmark')
-var benchmarks = require('beautify-benchmark')
-var chalk = require('chalk')
-var fixture = require('./fixture')
+const Benchmark = require('benchmark')
+const benchmarks = require('beautify-benchmark')
+const chalk = require('chalk')
+const fixture = require('./fixture')
 
 // libs
-var clone = require('clone')
-var cloneDeep = require('clone-deep')
-var cloneExtend = require('clone-extend')
-var cloneextend = require('cloneextend')
-var componentClone = require('component-clone')
-var dcopy = require('deep-copy')
-var deepcopy = require('deepcopy')
-var extend = require('extend')
-var lodash = require('lodash')
-var stringifyClone = require('stringify-clone')
-var structuredClone = require('structured-clone')
-var utilsCopy = require('utils-copy')
+const clone = require('clone')
+const cloneDeep = require('clone-deep')
+const cloneExtend = require('clone-extend')
+const cloneextend = require('cloneextend')
+const componentClone = require('component-clone')
+const dcopy = require('deep-copy')
+const deepcopy = require('deepcopy')
+const extend = require('extend')
+const lodash = require('lodash')
+const stringifyClone = require('stringify-clone')
+const structuredClone = require('structured-clone')
+const utilsCopy = require('utils-copy')
 
 new Benchmark.Suite()
-  .add('JSON.stringify', function () {
-    JSON.parse(JSON.stringify(fixture))
-  })
-
-  .add('stringify-clone', function () {
-    stringifyClone(fixture)
-  })
-
-  .add('clone', function () {
-    clone(fixture)
-  })
-
-  .add('clone-deep', function () {
-    cloneDeep(fixture)
-  })
-
-  .add('clone-extend', function () {
-    cloneExtend(fixture, {})
-  })
-
-  .add('cloneextend', function () {
-    cloneextend.clone(fixture)
-  })
-
-  .add('component-clone', function () {
-    componentClone(fixture)
-  })
-
-  .add('deepcopy', function () {
-    deepcopy(fixture)
-  })
-
-  .add('lodash', function () {
-    lodash.cloneDeep(fixture)
-  })
-
-  .add('structured-clone', function () {
-    structuredClone(fixture)
-  })
-
-  .add('utils-copy', function () {
-    utilsCopy(fixture)
-  })
-
-  .add('deep-copy', function () {
-    dcopy(fixture)
-  })
-
-  .add('extend', function () {
-    extend(true, {}, fixture)
-  })
+  .add('JSON.stringify', () => JSON.parse(JSON.stringify(fixture)))
+  .add('stringify-clone', () => stringifyClone(fixture))
+  .add('clone', () => clone(fixture))
+  .add('clone-deep', () => cloneDeep(fixture))
+  .add('clone-extend', () => cloneExtend(fixture, {}))
+  .add('cloneextend', () => cloneextend.clone(fixture))
+  .add('component-clone', () => componentClone(fixture))
+  .add('deepcopy', () => deepcopy(fixture))
+  .add('lodash', () => lodash.cloneDeep(fixture))
+  .add('structured-clone', () => structuredClone(fixture))
+  .add('utils-copy', () => utilsCopy(fixture))
+  .add('deep-copy', () => dcopy(fixture))
+  .add('extend', () => extend(true, {}, fixture))
 
   // add listeners
-  .on('cycle', function (event) {
-    benchmarks.add(event.target)
-  })
+  .on('cycle', (event) => benchmarks.add(event.target))
 
   .on('complete', function () {
     benchmarks.log()
@@ -85,6 +43,4 @@ new Benchmark.Suite()
     console.log('Slowest is %s', chalk.red(this.filter('slowest').map('name')))
   })
 
-  .run({
-    'async': true
-  })
+  .run({ async: true })
