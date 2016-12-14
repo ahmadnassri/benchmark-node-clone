@@ -20,12 +20,6 @@
 - ~~[`safe-clone-deep`](https://www.npmjs.com/package/safe-clone-deep) `v1.1.2`~~ *stopped working with node >= `v5.x`*
 
 
-### Preferred Method
-
-- `JSON.stringify`
-  - is native, and always available, less memory usage, and natively optimized
-  - `stringify-clone` provides a convenient wrapper
-
 ## Results
 
 ### `Node.js v7.2.x` *(Dec, 13, 2016)*
@@ -88,7 +82,8 @@
 
 ###### Fastest
 ```
-  stringify-clone  x 46,885 ops/sec ±1.14% (89 runs sampled)
+  deep-copy        x 38,524 ops/sec ±1.63% (86 runs sampled)
+  stringify-clone  x 46,885 ops/sec ±1.14% (89 runs sampled) (see note below) 
 ```
 ###### Slowest
 ```
@@ -111,3 +106,6 @@
   structured-clone x 35,511 ops/sec ±0.98% (95 runs sampled)
   utils-copy       x  6,486 ops/sec ±0.78% (90 runs sampled)
 ```
+
+although `stringify-clone` was fastest here, _it is just a wrapper around `JSON.parse(JSON.stringify())`_! 
+and thus does not provide true deep cloning for complex objects, review the project's [README](https://github.com/ahmadnassri/stringify-clone) for details on limitations.
