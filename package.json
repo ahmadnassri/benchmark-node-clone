@@ -34,7 +34,7 @@
     "deepclone": "1.0.2",
     "deepcopy": "0.6.3",
     "echint": "^4.0.1",
-    "extend": "3.0.0",
+    "extend": "3.0.1",
     "fast-clone": "1.4.2",
     "lodash": "4.17.4",
     "standard": "^10.0.0",
