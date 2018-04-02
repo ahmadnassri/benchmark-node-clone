@@ -37,7 +37,7 @@
     "extend": "3.0.0",
     "fast-clone": "1.4.2",
     "lodash": "4.17.4",
-    "standard": "^10.0.0",
+    "standard": "^11.0.0",
     "stringify-clone": "2.0.0",
     "structured-clone": "0.2.2",
     "utils-copy": "1.1.1"
