@@ -36,7 +36,7 @@
     "echint": "^4.0.1",
     "extend": "3.0.0",
     "fast-clone": "1.4.2",
-    "lodash": "4.17.4",
+    "lodash": "4.17.11",
     "standard": "^10.0.0",
     "stringify-clone": "2.0.0",
     "structured-clone": "0.2.2",
