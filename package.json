@@ -32,7 +32,7 @@
     "component-clone": "0.2.3",
     "deep-copy": "1.1.2",
     "deepclone": "1.0.2",
-    "deepcopy": "1.0.0",
+    "deepcopy": "1.0.1",
     "echint": "^4.0.1",
     "extend": "3.0.0",
     "fast-clone": "1.4.2",
